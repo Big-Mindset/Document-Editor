@@ -16,6 +16,10 @@ const geistMono = Geist_Mono({
 
 export const metadata = {
   title: "Document Editor",
+<<<<<<< HEAD
+=======
+  description: "Edit everything",
+>>>>>>> 29efb48dd8ab9fc55f280789e05ce9019cc750f8
 };
 
 export default function RootLayout({ children }) {
