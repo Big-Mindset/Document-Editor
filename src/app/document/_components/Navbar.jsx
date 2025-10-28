@@ -2,11 +2,12 @@
 
 import { DocumentLogo } from "@/assets/svgs";
 import { DeleteDocument } from "@/components/delete-document";
+
 import { ShareDocument } from "@/components/ShareDocument";
 import { Input } from "@/components/ui/input";
 import { updateDocument } from "@/lib/actions/create-room";
 import { roomStore } from "@/lib/store/roomStore";
-import { Edit, MoreVertical, Trash, X } from "lucide-react";
+import { Edit, MoreVertical, X } from "lucide-react";
 import { useRouter } from "next/navigation";
 import { useCallback, useEffect, useRef, useState } from "react";
 import { shallow } from "zustand/shallow";

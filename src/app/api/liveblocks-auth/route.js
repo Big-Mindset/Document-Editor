@@ -5,8 +5,7 @@ import { redirect } from "next/navigation";
 
 
 export async function POST(request) {
-  console.log("running");
-  
+
   // Get the current user from your database
   const {user} = await auth.api.getSession({headers : request.headers})
   if (!user) return redirect("/auth/login")
@@ -23,7 +22,6 @@ export async function POST(request) {
     },
     { userInfo: info },
   );
-  console.log(body);
   
 
   return new Response(body, { status });
