@@ -4,6 +4,10 @@ import { prisma } from "./prisma-client";
 import { sendVerificaitonEmail } from "./emails/send-verification-email";
 import { sendResetPasswordEmail } from "./emails/reset-password-email";
 export const auth = betterAuth({
+    trustedOrigins: [
+    "http://localhost:3000",
+    "https://*.vercel.app",  // ✅ This allows ALL Vercel preview URLs
+  ],
     database: prismaAdapter(prisma,{
         provider : "mongodb"
     }),
